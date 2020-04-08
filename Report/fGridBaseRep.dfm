@@ -1,0 +1,469 @@
+object frmGridBaseRep: TfrmGridBaseRep
+  Left = 0
+  Top = 0
+  Caption = 'frmGridBaseRep'
+  ClientHeight = 575
+  ClientWidth = 932
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 19
+  object cxGrid1: TcxGrid
+    Left = 0
+    Top = 49
+    Width = 932
+    Height = 526
+    Align = alClient
+    TabOrder = 0
+    object cxDBTV1: TcxGridDBTableView
+      Navigator.Buttons.CustomButtons = <>
+      DataController.DataSource = DataSource1
+      DataController.Summary.DefaultGroupSummaryItems = <>
+      DataController.Summary.FooterSummaryItems = <>
+      DataController.Summary.SummaryGroups = <>
+      OptionsData.CancelOnExit = False
+      OptionsData.Deleting = False
+      OptionsData.DeletingConfirmation = False
+      OptionsData.Editing = False
+      OptionsData.Inserting = False
+      OptionsSelection.CellSelect = False
+      OptionsView.CellEndEllipsis = True
+      OptionsView.Footer = True
+      OptionsView.GridLines = glVertical
+      Styles.SearchResultHighlight = FindPanel_cxStyle
+      Styles.Selection = HilightRow_cxStyle
+    end
+    object cxGrid1Level1: TcxGridLevel
+      GridView = cxDBTV1
+    end
+  end
+  object lbDescription: TcxLabel
+    Left = 0
+    Top = 26
+    Align = alTop
+    Caption = '<< TableName >>'
+  end
+  object DataSource1: TDataSource
+    Left = 480
+    Top = 128
+  end
+  object dxBarManager1: TdxBarManager
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Categories.Strings = (
+      'Default')
+    Categories.ItemsVisibles = (
+      2)
+    Categories.Visibles = (
+      True)
+    PopupMenuLinks = <>
+    UseSystemFont = True
+    Left = 360
+    Top = 120
+    PixelsPerInch = 96
+    DockControlHeights = (
+      0
+      0
+      26
+      0)
+    object dxBarManager1Bar1: TdxBar
+      Caption = 'Standard toolbars'
+      CaptionButtons = <>
+      DockedDockingStyle = dsTop
+      DockedLeft = 0
+      DockedTop = 0
+      DockingStyle = dsTop
+      FloatLeft = 671
+      FloatTop = 2
+      FloatClientWidth = 0
+      FloatClientHeight = 0
+      Images = cxImageList1
+      ItemLinks = <
+        item
+          Visible = True
+          ItemName = 'dxBarButtonPrint'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButtonDesign'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButtonRefresh'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButton3'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButtonExport'
+        end
+        item
+          Visible = True
+          ItemName = 'dxBarButtonClose'
+        end>
+      OneOnRow = True
+      Row = 0
+      UseOwnFont = False
+      Visible = True
+      WholeRow = False
+    end
+    object dxBarLargeButton1: TdxBarLargeButton
+      Caption = #3648#3614#3636#3656#3617'...'
+      Category = 0
+      Visible = ivAlways
+      LargeImageIndex = 0
+    end
+    object dxBarButton1: TdxBarButton
+      Caption = 'New Button'
+      Category = 0
+      Hint = 'New Button'
+      Visible = ivAlways
+    end
+    object dxBarButton2: TdxBarButton
+      Caption = 'New Button'
+      Category = 0
+      Hint = 'New Button'
+      Visible = ivAlways
+    end
+    object dxBarLargeButton2: TdxBarLargeButton
+      Caption = #3621#3610
+      Category = 0
+      Visible = ivAlways
+      LargeImageIndex = 1
+    end
+    object dxBarLargeButton3: TdxBarLargeButton
+      Action = Print_Action
+      Category = 0
+    end
+    object dxBarLargeButton4: TdxBarLargeButton
+      Action = Design_Action
+      Category = 0
+    end
+    object dxBarLargeButton5: TdxBarLargeButton
+      Action = Close_Action
+      Category = 0
+    end
+    object dxBarLargeButton6: TdxBarLargeButton
+      Action = Refresh_Action
+      Category = 0
+    end
+    object dxBarButtonNew: TdxBarButton
+      Caption = #3648#3614#3636#3656#3617'...'
+      Category = 0
+      Visible = ivAlways
+      ImageIndex = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButtonDelete: TdxBarButton
+      Caption = #3621#3610
+      Category = 0
+      Visible = ivAlways
+      ImageIndex = 1
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButtonPrint: TdxBarButton
+      Action = Print_Action
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButtonClose: TdxBarButton
+      Action = Close_Action
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButtonDesign: TdxBarButton
+      Action = Design_Action
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButtonRefresh: TdxBarButton
+      Action = Refresh_Action
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButton4: TdxBarButton
+      Caption = 'Export excel'
+      Category = 0
+      Visible = ivAlways
+      ImageIndex = 6
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButton5: TdxBarButton
+      Caption = 'New Button'
+      Category = 0
+      Hint = 'New Button'
+      Visible = ivAlways
+    end
+    object dxBarButtonExport: TdxBarButton
+      Action = Export_Action
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+    object dxBarButton3: TdxBarButton
+      Action = ActionFind
+      Category = 0
+      PaintStyle = psCaptionGlyph
+    end
+  end
+  object ActionList1: TActionList
+    Images = cxImageList1
+    Left = 80
+    Top = 120
+    object Print_Action: TAction
+      Caption = #3614#3636#3617#3614#3660
+      ImageIndex = 3
+      OnExecute = Print_ActionExecute
+    end
+    object Design_Action: TAction
+      Caption = #3629#3629#3585#3649#3610#3610#3619#3634#3618#3591#3634#3609
+      ImageIndex = 2
+      OnExecute = Design_ActionExecute
+    end
+    object Close_Action: TAction
+      Caption = #3611#3636#3604#3627#3609#3657#3634#3592#3629
+      ImageIndex = 4
+      OnExecute = Close_ActionExecute
+    end
+    object Refresh_Action: TAction
+      Caption = #3619#3637#3648#3615#3619#3594
+      ImageIndex = 5
+    end
+    object Export_Action: TAction
+      Caption = #3626#3656#3591#3629#3629#3585#3586#3657#3629#3617#3641#3621' (Excel)'
+      ImageIndex = 6
+    end
+    object ActionFind: TAction
+      Caption = #3588#3657#3609#3627#3634
+      ImageIndex = 7
+      OnExecute = ActionFindExecute
+    end
+  end
+  object cxImageList1: TcxImageList
+    SourceDPI = 96
+    FormatVersion = 1
+    DesignInfo = 7864560
+    ImageInfo = <
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001974455874536F6674776172650041646F626520496D616765526561
+          647971C9653C00000023744558745469746C65004164643B46696C653B416464
+          46696C653B426172733B526962626F6E3B15DCAA0A0000006649444154785EC5
+          D3C10980300C85E1EEE46E4E9073AE8EE0542EE2214F02A988D01769510B3FC9
+          217CB71600439D8B88806431270AB0E780AA6E8E740300F68AF400F728906136
+          0AE07B605E17AF02BEFF0778391047B457018695E8F1674A8166D7E3167000B4
+          CA22A39854CBD00000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001974455874536F6674776172650041646F626520496D616765526561
+          647971C9653C0000005A744558745469746C650044656C6574653B44656C6574
+          654974656D3B52656D6F76653B52656D6F76654974656D3B44656C6574654C69
+          73743B4C6973743B52656D6F76654C6973743B4974656D3B4C6973743B436C65
+          61723B457261736558E2170B0000008149444154785EC591C10980300C45DD29
+          2BB889E0243D771A17700B110437F028783012F08B15FC2DAD60E191F0695ED1
+          54AA5AC4D538E794B09F55A8801D1378EF274872045636487204015CC0F95700
+          D2054BDFE9D0D4BACE2322EB2D33DA9800172131822C26C0C01BC2055C223657
+          2CF8F6131EA4FE448EAD0AAFDD32C11A0FE2412B8463972A170000000049454E
+          44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001974455874536F6674776172650041646F626520496D616765526561
+          647971C9653C0000002C744558745469746C65004F7074696F6E733B43757374
+          6F6D697A3B426172733B526962626F6E3B5374616E646172643B6534D17A0000
+          00C149444154785EBDD3310AC240100550EFE43912D18BD88975DCB439808D56
+          9E21A6509B8869042D14112B09040FA098E87E19C8C842705823F8E1B3D5BC9D
+          2DB601E0A7BE01A51484EAF26C8A80140282203811521B009033520B302B0372
+          FE0CF4462B74FC08D1FA8C5BFEF81E986F53B40653385E88C9E2680FF4C70996
+          FB0C94D92685EB8584D803DD618CB61F21DE65786A4DC354F60993017A330DB8
+          E5FADCE470B103AEF782DECC83154406AAE121B38EED67FA883060555E996E36
+          37780128A129F712398B680000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001974455874536F6674776172650041646F626520496D616765526561
+          647971C9653C0000000C744558745469746C65005072696E743BC83632EA0000
+          006C49444154785ECD93510AC0300843BD5E0BBBD4F0503B51AFE1BA2F833482
+          F8B3403E02E1514215336B595435DA326F61F70C20FA11002138480980230E18
+          49AEFBB1CC5B38F4F8C26A00960707A40E000F15B70038240510D117CC03208E
+          C700B3FC9142B77E4CB1DF3EE717F0B39D5A77A466F80000000049454E44AE42
+          6082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001974455874536F6674776172650041646F626520496D616765526561
+          647971C9653C0000001D744558745469746C6500436C6F73653B457869743B42
+          6172733B526962626F6E3B4603B9E80000008D49444154785EC5D3310A843014
+          8461ABA0F7DA9B7891B8284874D9B3982A47F136D9E7E26B86611A058BA9C2FF
+          150969F6FE55AFEC7620DB26118CB6CC008F43AD7FF44DE2789E05DBC68074C4
+          3E40229C7D10F0CD800C245EE4252222620008A2630D44020C025031221A8810
+          ACFC623930622C5E676240B175182362516B2B0C70E42BFE40F2D8F7FC6FFC01
+          4BA2809EA80656100000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000027744558745469746C6500526566726573683B5265706561743B4261
+          72733B526962626F6E3B52656C6F6164CD4DF6E90000037749444154785E6593
+          6B4C537718C69F73E885622F4069C9B02DA1ADB60C2133D471DDD451D8257C02
+          2661B3719912A3092163898BDBF8B06422DB74612612CDE64CDCE2A698CC2DA2
+          0C541C9918645BB701EB3414B99536E08022A597737ADE71927E58C693BCFFBC
+          F9E5799E2FFFBC0C364A64FFE794988DE6CF6F55032034567433EF7596AB37E7
+          A85AC0302FB22C1C448020D02F3C47BD8F3C4B9F76BC3314FCE44A05AD330844
+          585F80B3BDAF00007BB2CBE9BC70C73533E0F998BCF33F5030FA9B38343EFF3D
+          F58F1EA7737D0DB347CF943A456F44F06085BF87F7BF28054470A2AB72CFE5C1
+          43F4C07F999EC4876989FB891E477B6921DA438BDC6D5A37D398EF22755EDD4B
+          CD271DF5626689BB83B74E3920693AB643AF516BCFE7659723439B0E6F6008D7
+          6F0F60E46F0F44E5DB6D28DABE1DF9D66750F8F4F3989B0F7C597DC0329026DD
+          153878BC80D8CCEC4D2DD9FADC145D8606EE078338FBF5377CFFDDC10FA7C717
+          AC33138FAD3F0F0D1FB976EBC798D7EF86C1900AAB292F45A393BE0D800DADC5
+          20E1E3F4B22E3D13ABDC1CDC7F8D61666EAEADEFCCEC31001C44011DCA237266
+          F88FB18F5277CB91AE27C438FE2500EF46C25C9CE5B9B84DA10462F12798F64D
+          63C5C79D17C3CBDC5D4A7C27EBEE5BF86ABD18E3C11E90F2112251CE044071E5
+          84572E0947F8C8C44A8F54A94843B24C0685542E88414E0893B3DEACCA2FD6FB
+          08B4492661118AFD038A876032EA5587DB75CB828065361CE2A67D8100FC2137
+          AC66234C76CD7E00529DDCC9DCBC34115E5E8C746CCBCD455DCD0B880B1C1809
+          8FC6FDB5D0E9B4181B9D6D4FB239B45B55AA9462953E0C8D3C0B6BAB5462B029
+          42AA34B94FFB540A3B726FFE7E7246AC9E74BF6B92A4045EE0F170E657F47C37
+          35E5BEBE788029ADDE6CDE569239BA65475461B66402410BA6BC8B989CF46375
+          758DF38E2E952B53E5B6AD858A0BF93BA31075B32B04CFF08ACBDD1DBC240259
+          952BA7F1607B01B575DBE9DB87657463B281067CCD7471701FD535E7F603D0D7
+          34D9FBDB6ED8A8F5AA899EAD4D1599120083C4935C5663A8AF6BD9E26FEAB4D0
+          07D72C74EABE95CEB94BE8707B1155BC96E372546595B85AF3B8CA43199CA558
+          510440E278550D54BD99932881D468571BCA6A0D9FED6C308EECDE6BA25DAF9B
+          E8B93DC63F2BDFB0B4025057ED339F2EA8569E06A0103385752A301BCF1832B1
+          1D4052820B006200E2FF615C82E35FC02B8FD5CBC3AEEB0000000049454E44AE
+          426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          610000001F744558745469746C65004578706F72743B58736C743B4578706F72
+          74546F58736C743B13D67B9B000001F649444154785E8593BF6E134110C6BF39
+          1CA0404282868E07A046E048C84854202544A60D20022555CE261D0552003BA9
+          5324B1808ACAC6E10122A1C4162F410D8248E18F80F87237C3ECDC8E74920BD6
+          77FE8DB5F37DB3EBD9251101E900507DE19C8E0DA2C84547CD133A5B1F77134A
+          1A361B3E52AA58EC1B12284A10F2FC68EFE9E3EB37001CBB4102A146FAE8B2FB
+          C383E99FC0EAC6F89AE244D5807261134EB222C05600A39B90E94F9F24143997
+          4501B801152A54A2080217C7BFC4BC49A231212F2C97AA06EA5A9844A2811059
+          2C65AAC766D6B87211AB5EF9D4F3077D65139610ABBB90A3997069CC45499091
+          048324887FB636ADCC8F74CB4A1CB6B65D8C27F5391CA43D1CB47A1024F8DA7A
+          6D865FD2574A69D6AC2E07476F550266C4AD08DAB3F338DF5D321158C26354B1
+          691212C28BF10EBEA7DB46963C6EA54CEA8C76F04D5714F2048CF5D1109FDB6F
+          B03E1EDAAA93E0B2529FC7D9B525AC5C9D03845C6CECECBF4377F45E97DCB3B9
+          E5D9DBB8D0BD87E5FA82CDD71013513E251961CF2A1EA2AD892C82B550D18D41
+          9100CD3C5BEC43A8E9158D16B209C0DE7F73F69E228E815FA633F7D3FEAFCD97
+          0B9864EC77C1FB1E638E04F6C69F70E7D6A573AA3DF48394677FFF7C78D81E34
+          5880241E9C101359972AA753904D7EEF03C8AA27317BBB71F7A672E6FF57DAAC
+          8E95474AFC03299E64332F8635120000000049454E44AE426082}
+      end
+      item
+        ImageClass = 'TdxPNGImage'
+        Image.Data = {
+          89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+          6100000026744558745469746C650046696E643B426172733B526962626F6E3B
+          5374616E646172643B536561726368BB659C08000002D149444154785EAD936D
+          48936B18C7FF7B369FB5E3CB3C6AEACC66E66C94980AF6C1B74A462FE743E087
+          2526299812C519A20B03C98A3AC9D2E8E518519F52222A2789ACF99264C58AD0
+          322A848E9BBA6992D95496BACD3DDBF43EF7C62AE9ABFDE1C77D735DF7F5E7BA
+          EEFB79788410FC2EF128020A4B09A230AB733FF8454CEDE54EFF7AF8EFC6CD6A
+          4DFBA39A069DBDF282565F507A2AD96758A369939EB9D6ABAB6BEA75D55EE9D2
+          A9EAEE487D466A4D07FC525FF46F84AAF3DA572F07C7C8F0E814B9DD6A20AA73
+          5A0E40485D538F6BE0C3383159BE929B779F90AAFA760300BEEA6CDBCF2E9465
+          F5F9FF5CEF21D3338BC43060240DD75BC9D1DA7B04C0969397F464F2CB376234
+          5B49F3FD3EA23A7D8F9454DFC8FA3E0E43091286FD59BE4D168B2597070E9717
+          939356184DA3D8B1F784D16432C3C97941C0032B12C2EB716085B01500F87E83
+          2D698AE820365429A70636BB0B8B4E17161C2E78380F122591F0B8396ABA0CEF
+          0A8150148C20FE0ABCCB284ECB514600E031F2F4FDF58A6CB9302E468CD4E418
+          A46FDD88785FA1D78D71CB3838B71B3C1E81242A1407F2535176682FC0D9D689
+          C2132E0010308C4054989F2547F7D31114553DC4DB8F56ECCE4D839B165A67A6
+          C0D1B1A2C422E8FB465158A9C390D981A2821CDAA1BBC46FC0B9BCFCF03021BA
+          0CA38854E4A17BC08CED294960593EC6FFD3FF151B17075FBEF38505EBF765A3
+          67F013D25393E97D39F900186689B34F8E4DCC4091BB09F3AFFBB13B538A11F3
+          17D817E626000C3916178C96092BF6E44961EB7F83FCCC784C4DCF8273DA2D00
+          0833373D72B5B9F53912625834AA7642124CD0F2E031E667276E02B0DBAC9F2F
+          B5689F214922C0BFD53990867970ABB9034EFBAC06808702B12C43A94EC93B36
+          BC2DEF389165161B6365BB6A0044049E6A5D4A56E991949C8A77F2AC32929871
+          F0BD44AE2807205AFD2DFC4189A66CA0C450820371040EB18198981242610371
+          ACF96F64B046FD0FE22625E3DA6A63E80000000049454E44AE426082}
+      end>
+  end
+  object cxStyleRepository1: TcxStyleRepository
+    Left = 8
+    Top = 48
+    PixelsPerInch = 96
+    object FindPanel_cxStyle: TcxStyle
+      AssignedValues = [svColor]
+      Color = 3856639
+    end
+    object HilightRow_cxStyle: TcxStyle
+      AssignedValues = [svColor]
+      Color = 8708095
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = 'xlsx'
+    Filter = 
+      'Excel Workbook (*.xlsx)|*.xlsx|Excel 97-2003 Workbook (*.xls)|*.' +
+      'xls'
+    Title = 'Export data to Excel format.'
+    Left = 632
+    Top = 160
+  end
+  object frxReport1: TfrxReport
+    Version = '5.6.14'
+    DataSet = frxDBDataset1
+    DataSetName = 'frxDBDataset1'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43907.607309988420000000
+    ReportOptions.LastChange = 43907.607309988420000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 200
+    Top = 248
+    Datasets = <>
+    Variables = <>
+    Style = <>
+  end
+  object frxDBDataset1: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    BCDToCurrency = False
+    Left = 200
+    Top = 312
+  end
+end
